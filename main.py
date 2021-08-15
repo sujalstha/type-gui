@@ -66,3 +66,15 @@ class Game:
             print(self.total_time)
             print(self.results)
             pygame.display.update()
+
+    def run(self):
+        self.reset_game()
+
+        self.running = True
+        while (self.running):
+            clock = pygame.time.Clock()
+            self.screen.fill((0, 0, 0), (50, 250, 650, 50))
+            pygame.draw.rect(self.screen, self.HEAD_C, (50, 250, 650, 50), 2)
+
+            # update the text of user input
+            self.draw_text(self.screen, self.input_text, 274, 26, (250, 250, 250))
