@@ -64,3 +64,5 @@ class Game:
             self.wpm = len(self.input_text) * 60 / (5 * self.total_time)
             self.end = True
             print(self.total_time)
+            print(self.results)
+            pygame.display.update()
