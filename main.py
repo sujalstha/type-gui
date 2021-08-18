@@ -178,9 +178,6 @@ class Game:
                     self.results = 'Time:' + str(round(self.total_time)) + " secs   Accuracy:" + str(
                         round(self.accuracy)) + "%" + '   Wpm: ' + str(round(self.wpm))
 
-                    # draw icon image
-                    self.time_img = pygame.image.load('images/icon.png')
-                    self.time_img = pygame.transform.scale(self.time_img, (150, 150))
 
                     # screen.blit(self.time_img, (80,320))
                     screen.blit(self.time_img, (self.w / 2 - 75, self.h - 140))
