@@ -2,6 +2,7 @@ import pygame
 import pyjokes
 from pygame.locals import *
 import time
+import sys
 import random
 
 
