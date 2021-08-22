@@ -92,7 +92,7 @@ class Game:
                         self.input_text = ''
                         self.time_start = time.time()
                     # position of reset box
-                    if (x >= 310 and x <= 510 and y >= 390 and self.end):
+                    if x >= 310 and x <= 510 and y >= 390 and self.end:
                         self.reset_game()
                         x, y = pygame.mouse.get_pos()
                 elif event.type == pygame.KEYDOWN:
@@ -156,7 +156,7 @@ class Game:
                 return sentence
 
         def show_results(self, screen):
-            if (not self.end):
+            if not self.end:
 
                 # Calculate time
                 self.total_time = time.time() - self.time_start
@@ -179,7 +179,6 @@ class Game:
                     self.results = 'Time:' + str(round(self.total_time)) + " secs   Accuracy:" + str(
                         round(self.accuracy)) + "%" + '   Wpm: ' + str(round(self.wpm))
 
-
                     # screen.blit(self.time_img, (80,320))
                     screen.blit(self.time_img, (self.w / 2 - 75, self.h - 140))
                     self.draw_text(screen, "Reset", self.h - 70, 26, (100, 100, 100))
@@ -191,7 +190,7 @@ class Game:
                 self.reset_game()
 
                 self.running = True
-                while (self.running):
+                while self.running:
                     clock = pygame.time.Clock()
                     self.screen.fill((0, 0, 0), (50, 250, 650, 50))
                     pygame.draw.rect(self.screen, self.HEAD_C, (50, 250, 650, 50), 2)
@@ -206,7 +205,7 @@ class Game:
                         elif event.type == pygame.MOUSEBUTTONUP:
                             x, y = pygame.mouse.get_pos()
                             # position of input box
-                            if 50 <= x <= 650 and y >= 250 and y <= 300:
+                            if 50 <= x <= 650 and 250 <= y <= 300:
                                 self.active = True
                                 self.input_text = ''
                                 self.time_start = time.time()
