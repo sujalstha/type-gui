@@ -198,17 +198,21 @@ class Game:
                     # update the text of user input
                     self.draw_text(self.screen, self.input_text, 274, 26, (250, 250, 250))
                     pygame.display.update()
+
                     for event in pygame.event.get():
                         if event.type == QUIT:
                             self.running = False
                             sys.exit()
+
                         elif event.type == pygame.MOUSEBUTTONUP:
                             x, y = pygame.mouse.get_pos()
+
                             # position of input box
                             if 50 <= x <= 650 and 250 <= y <= 300:
                                 self.active = True
                                 self.input_text = ''
                                 self.time_start = time.time()
+
                             # position of reset box
                             if 310 <= x <= 510 and y >= 390 and self.end:
                                 self.reset_game()
