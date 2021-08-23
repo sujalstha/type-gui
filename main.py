@@ -42,6 +42,7 @@ class Game:
 
     def get_sentence(self):
         sentence = pyjokes.get_joke()
+
         if len(sentence) <= 75:
             return sentence
 
@@ -53,6 +54,7 @@ class Game:
 
             # Calculate accuracy
             count = 0
+
             for i, c in enumerate(self.word):
                 try:
                     if self.input_text[i] == c:
