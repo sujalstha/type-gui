@@ -140,10 +140,8 @@ class Game:
             self.RESULT_C = (255, 70, 70)
 
             pygame.init()
-            self.open_img = pygame.image.load('images/type-speed-open.png')
-            self.open_img = pygame.transform.scale(self.open_img, (self.w, self.h))
 
-            self.bg = pygame.image.load('images/background.jpg')
+            self.open_img = pygame.transform.scale(self.open_img, (self.w, self.h))
             self.bg = pygame.transform.scale(self.bg, (750, 500))
 
             self.screen = pygame.display.set_mode((self.w, self.h))
