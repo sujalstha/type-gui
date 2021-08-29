@@ -272,5 +272,8 @@ class Game:
 
             pygame.display.update()
 
+    def reset_game(self):
+        pass
+
 
 Game().run()
