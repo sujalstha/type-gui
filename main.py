@@ -280,4 +280,4 @@ class Game:
 
             pygame.display.update()
 
-        Game().run()
+Game().run()
